@@ -7,32 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "context_servers": {
-    "mcp-server-context7": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {
-        "default_minimum_tokens": "10000"
-      }
-    }
+  "edit_predictions": {
+    "provider": "zed",
   },
-
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
-
   "agent": {
-    "play_sound_when_agent_done": true,
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
-    }
+    "enabled": false,
+  },
+
+  "notification_panel": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "outline_panel": {
+    "dock": "right",
   },
 
   "telemetry": {
-    "metrics": false
+    "metrics": false,
+    "diagnostics": false,
   },
+
+  "auto_indent_on_paste": true,
 
   "vim_mode": true,
   "ui_font_size": 16,
@@ -41,12 +38,12 @@
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
 
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Kanagawa Wave"
-  }
+    "dark": "Kanagawa Wave",
+  },
 }

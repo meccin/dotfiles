@@ -1,0 +1,11 @@
+{
+  "effortLevel": "high",
+  "env": {
+    "EDITOR": "zed --wait",
+    "VISUAL": "zed --wait"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/meccin/.claude/statusline-command.sh"
+  }
+}
