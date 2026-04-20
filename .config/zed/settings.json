@@ -14,9 +14,6 @@
     "enabled": false,
   },
 
-  "notification_panel": {
-    "button": false,
-  },
   "collaboration_panel": {
     "button": false,
   },
@@ -47,7 +44,7 @@
 
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
+    "light": "Everforest Light Hard (regular)",
     "dark": "Kanagawa Wave",
   },
 }

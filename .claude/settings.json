@@ -3,10 +3,11 @@
     "EDITOR": "zed --wait",
     "VISUAL": "zed --wait"
   },
+  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "bash /Users/meccin/.claude/statusline-command.sh"
   },
-  "effortLevel": "high",
-  "model": "opus"
+  "effortLevel": "xhigh",
+  "tui": "fullscreen"
 }

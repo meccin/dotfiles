@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES="$(cd "$(dirname "$0")" && pwd)"
+USER_ID=$(id -u)
+
+echo "→ stow"
+stow -t "$HOME" -d "$DOTFILES" .
+
+echo "→ compiling change-wallpaper"
+mkdir -p "$HOME/.local/bin"
+swiftc "$HOME/.wallpapers/change-wallpaper.swift" -o "$HOME/.local/bin/change-wallpaper"
+
+echo "→ linking LaunchAgent"
+ln -sf "$HOME/.config/launchagents/sh.celo.change-wallpaper.plist" \
+       "$HOME/Library/LaunchAgents/sh.celo.change-wallpaper.plist"
+
+echo "→ loading LaunchAgent"
+launchctl bootout "gui/$USER_ID/sh.celo.change-wallpaper" 2>/dev/null || true
+launchctl bootstrap "gui/$USER_ID" "$HOME/Library/LaunchAgents/sh.celo.change-wallpaper.plist"
+
+echo "✓ done"

@@ -17,3 +17,6 @@ alias python="python3"
 # Starship
 set -gx STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 starship init fish | source
+
+# Claude 2nd account
+alias cld='CLAUDE_CONFIG_DIR="$HOME/.claude2" claude'
