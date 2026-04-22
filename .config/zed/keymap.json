@@ -4,6 +4,7 @@
     "bindings": {
       "alt-shift-c": ["task::Spawn", { "task_name": "claude" }],
       "alt-shift-d": ["task::Spawn", { "task_name": "cld" }],
+      "alt-shift-w": ["task::Spawn", { "task_name": "clw" }],
     },
   },
 ]

@@ -2,3 +2,5 @@
 *.bak
 
 shizukana-extras/
+.claude-wises/
+.claude2/

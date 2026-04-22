@@ -6,7 +6,7 @@ This repository contains my personal dotfiles and configurations for various app
 
 ```sh
 brew install stow
-./setup
+./.setup
 ```
 
 ---

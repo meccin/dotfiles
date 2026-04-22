@@ -4,6 +4,8 @@ set -euo pipefail
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 USER_ID=$(id -u)
 
+mkdir -p "$HOME/.claude-wises"
+
 echo "→ stow"
 stow -t "$HOME" -d "$DOTFILES" .
 

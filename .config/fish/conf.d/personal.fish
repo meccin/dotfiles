@@ -20,3 +20,6 @@ starship init fish | source
 
 # Claude 2nd account
 alias cld='CLAUDE_CONFIG_DIR="$HOME/.claude2" claude'
+
+# Claude Wises (empresa)
+alias clw='CLAUDE_CONFIG_DIR="$HOME/.claude-wises" claude'
