@@ -179,6 +179,19 @@ fi
 # --- Model name ---
 model_section=$(printf "${bold}${fg_white}%s${reset}" "$model")
 
+# --- Caveman mode ---
+caveman_section=""
+caveman_flag="$HOME/.claude/.caveman-active"
+if [ -f "$caveman_flag" ]; then
+  caveman_mode=$(cat "$caveman_flag" 2>/dev/null)
+  if [ "$caveman_mode" = "full" ] || [ -z "$caveman_mode" ]; then
+    caveman_section=$'\033[38;5;172m[CAVEMAN]\033[0m'
+  else
+    caveman_suffix=$(echo "$caveman_mode" | tr '[:lower:]' '[:upper:]')
+    caveman_section=$'\033[38;5;172m[CAVEMAN:'"${caveman_suffix}"$']\033[0m'
+  fi
+fi
+
 # --- Assemble line ---
 sep=$(printf "${fg_dark} · ${reset}")
 
@@ -189,6 +202,7 @@ parts+=("$model_section")
 [ -n "$rate_section"     ] && parts+=("$rate_section")
 [ -n "$worktree_section" ] && parts+=("$worktree_section")
 [ -n "$git_section"      ] && parts+=("$git_section")
+[ -n "$caveman_section"  ] && parts+=("$caveman_section")
 
 line=""
 for i in "${!parts[@]}"; do
