@@ -9,5 +9,6 @@
     "command": "bash /Users/meccin/.claude/statusline-command.sh"
   },
   "effortLevel": "xhigh",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "theme": "auto"
 }
